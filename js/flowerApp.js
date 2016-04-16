@@ -20,9 +20,25 @@ var heirloomRoses = new app.singleFlower({
   link: "heirloomRose"
 });
 
+var tantilalizingTulips = new app.singleFlower({
+  name: "Tantalizing Tulips",
+  price: 69.99,
+  color: 'pink'
+});
+
+var fleurdeLis = new app.singleFlower({
+  name: "Fleur-de-lis",
+  price: 200.00,
+  color: 'green'
+});
+
 //create array in flowerGroup variable
 var flowerGroup = new app.FlowersCollection([
   redRoses, rainbowRoses
+]);
+
+var europeanFlowers= new app.FlowersCollection([
+  tantilalizingTulips, fleurdeLis
 ]);
 
 //add heirloomRoses to flowerGroup
@@ -32,6 +48,7 @@ flowerGroup.add(heirloomRoses);
 flowerGroup.remove(redRoses);
 
 console.log(flowerGroup.toJSON());
+console.log(europeanFlowers.toJSON());
 
 // rainbowRoses.set('price', 20);
 // console.log(heirloomRoses.toJSON());
