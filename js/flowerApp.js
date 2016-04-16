@@ -20,7 +20,20 @@ var heirloomRoses = new app.singleFlower({
   link: "heirloomRose"
 });
 
-rainbowRoses.set('price', 20);
+//create array in flowerGroup variable
+var flowerGroup = new app.FlowersCollection([
+  redRoses, rainbowRoses
+]);
+
+//add heirloomRoses to flowerGroup
+flowerGroup.add(heirloomRoses);
+
+//remove redRoses from flowerGroup
+flowerGroup.remove(redRoses);
+
+console.log(flowerGroup.toJSON());
+
+// rainbowRoses.set('price', 20);
 // console.log(heirloomRoses.toJSON());
 // console.log(rainbowRoses.toJSON());
 // console.log(redRoses.toJSON());
