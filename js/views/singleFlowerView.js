@@ -16,8 +16,8 @@ app.singleFlowerView = Backbone.View.extend({
   },
 
   events: {
-    'mouseover': 'addBgColor',
-    'mouseout': 'removeBgColor'
+    'mouseover .root': 'addBgColor',
+    'mouseout. .root': 'removeBgColor'
   },
 
   addBgColor: function() {
